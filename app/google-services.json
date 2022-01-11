@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "37332174732",
+    "project_id": "delivery-perfeito",
+    "storage_bucket": "delivery-perfeito.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37332174732:android:135c51e9f4fc0d1bbdb8a9",
+        "android_client_info": {
+          "package_name": "com.example.trab_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37332174732-gqlpd63i7piifihq27jlomo08nsd21ag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGZ9Ov6dLBWI0t5HFNL3WkFnxtR0KvlBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37332174732-gqlpd63i7piifihq27jlomo08nsd21ag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
