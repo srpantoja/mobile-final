@@ -43,7 +43,6 @@ class Signup : AppCompatActivity() {
             val email = inputEmail.text.toString()
             val password = inputPassword.text.toString()
             val role = inputRole.selectedItem.toString()
-            println("TESSSSSSSTEEEEE" + role)
             signup(name, email, role, password)
         }
     }
