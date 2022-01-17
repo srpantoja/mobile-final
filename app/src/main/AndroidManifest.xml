@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabfinal">
         <activity
+
             android:name=".view.MainEmpresa"
             android:exported="true" />
         <activity
