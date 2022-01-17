@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabfinal">
         <activity
+            android:name=".view.createOrders"
+            android:exported="true" />
+        <activity
             android:name=".view.CadPedidos"
             android:exported="true" />
         <activity
