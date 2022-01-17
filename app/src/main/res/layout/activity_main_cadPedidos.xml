@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de Pedidos"
+        android:textSize="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/titleAtendente"
+        />
+    <EditText
+        android:id="@+id/edit_name_client"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/titleAtendente"
+        android:hint="Nome Cliente"
+        android:background="@drawable/input_backgroud"
+        android:paddingLeft="13dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp" />
+    <EditText
+        android:id="@+id/edit_rua"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_name_client"
+        android:layout_marginTop="18dp"
+        android:hint="Rua"
+        android:background="@drawable/input_backgroud"
+        android:paddingLeft="13dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp" />
+
+    <EditText
+        android:id="@+id/edit_bairro"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_rua"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/input_backgroud"
+        android:hint="Bairro"
+        android:paddingLeft="13dp" />
+
+    <EditText
+        android:id="@+id/edit_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_bairro"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/input_backgroud"
+        android:hint="Número"
+        android:paddingLeft="13dp" />
+
+    <EditText
+        android:id="@+id/edit_codProduto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_number"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/input_backgroud"
+        android:hint="Código Produto"
+        android:paddingLeft="13dp" />
+
+    <EditText
+        android:id="@+id/edit_emailEntregador"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_codProduto"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/input_backgroud"
+        android:hint="Email do Entregador"
+        android:paddingLeft="13dp" />
+
+    <Button
+        android:id="@+id/btn_signup_pedido"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_emailEntregador"
+        android:text="Cadastrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+
+</RelativeLayout>
