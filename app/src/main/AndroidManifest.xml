@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabfinal">
         <activity
-            android:name=".view.DeliveryListOrders"
+
+            android:name=".view.MainEmpresa"
             android:exported="true" />
         <activity
             android:name=".view.Signup"
