@@ -6,10 +6,9 @@
     tools:context=".fragmentsEmpresa.AtendenteFragment">
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="635dp"
         android:id="@+id/list_viewAtendente"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="635dp" />
     <Button
         android:layout_width="170dp"
         android:layout_height="50dp"
