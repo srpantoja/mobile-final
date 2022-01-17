@@ -25,10 +25,7 @@ class MainEmpresa : AppCompatActivity() {
                     tab.text="Pedidos"
                 }
                 1 -> {
-                    tab.text="Entregadores"
-                }
-                2 -> {
-                    tab.text="Atendentes"
+                    tab.text="Funcionarios"
                 }
             }
         }.attach()
