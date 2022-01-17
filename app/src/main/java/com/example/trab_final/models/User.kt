@@ -14,6 +14,4 @@ class User {
         this.role = role
         this.uId = uId
     }
-
-
 }
