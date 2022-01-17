@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.*
 import com.example.trab_final.Main
 import com.example.trab_final.R
+import com.example.trab_final.models.Company
 import com.example.trab_final.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -50,7 +51,10 @@ class Signup : AppCompatActivity() {
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){task ->
                 if(task.isSuccessful){
-                    addUserToDatabase(name, email, role, mAuth.currentUser?.uid!!)
+                    if(role == "empresa")
+                        addCompanyToDatabase(name, email, role, mAuth.currentUser?.uid!!)
+                    else
+                        addUserToDatabase(name, email, role, mAuth.currentUser?.uid!!)
                     val intent = Intent(this@Signup, Main::class.java)
                     finish()
                     startActivity(intent)
@@ -59,6 +63,12 @@ class Signup : AppCompatActivity() {
                 }
             }
     }
+
+    private fun addCompanyToDatabase(name: String, email: String, role: String, uid: String){
+        mDbRef = FirebaseDatabase.getInstance().getReference()
+        mDbRef.child("company").child(uid).setValue(Company(name, email,role, uid))
+    }
+
     private fun addUserToDatabase(name: String, email: String, role: String, uid: String){
         mDbRef = FirebaseDatabase.getInstance().getReference()
         mDbRef.child("user").child(uid).setValue(User(name, email,role, uid))
