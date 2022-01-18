@@ -51,8 +51,10 @@ class Signup : AppCompatActivity() {
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){task ->
                 if(task.isSuccessful){
-                    if(role == "empresa")
+                    if(role == "empresa"){
+                        addUserToDatabase(name, email, role, mAuth.currentUser?.uid!!)
                         addCompanyToDatabase(name, email, role, mAuth.currentUser?.uid!!)
+                    }
                     else
                         addUserToDatabase(name, email, role, mAuth.currentUser?.uid!!)
                     val intent = Intent(this@Signup, Main::class.java)

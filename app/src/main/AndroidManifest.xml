@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabfinal">
         <activity
+            android:name=".view.funcionarioListOrders"
+            android:exported="true" />
+        <activity
             android:name=".view.createOrders"
             android:exported="true" />
         <activity
-            android:name=".view.CadPedidos"
+            android:name=".view.DeliveryListOrders"
             android:exported="true" />
         <activity
             android:name=".view.MainEmpresa"
