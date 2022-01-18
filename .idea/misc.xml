@@ -3,17 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_create_orders.xml" value="0.1734375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_delivery_list_orders.xml" value="0.259375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_funcionario_list_orders.xml" value="0.1734375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_main.xml" value="0.259375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_main_atendente.xml" value="0.259375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_main_cadPedidos.xml" value="0.2318840579710145" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_main_empresa.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_main_empresa2.xml" value="0.259375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_signup.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/fragment_atendente.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/fragment_entregadores.xml" value="0.259375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/fragment_funcionario.xml" value="0.259375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/fragment_pedidos.xml" value="0.259375" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/funcionario_orders_row.xml" value="0.176" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/orders_rows.xml" value="0.259375" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/drawable/ic_baseline_bike_scooter_24.xml" value="0.22552083333333334" />
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/drawable/input_backgroud.xml" value="0.22552083333333334" />
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_create_orders.xml" value="0.1" />
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_delivery_list_orders.xml" value="0.209375" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_login.xml" value="0.209375" />
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_main.xml" value="0.209375" />
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_main_cadPedidos.xml" value="0.1" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_signup.xml" value="0.209375" />
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/orders_rows.xml" value="0.33" />
       </map>
     </option>
   </component>
