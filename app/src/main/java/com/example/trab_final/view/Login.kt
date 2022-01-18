@@ -5,15 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Spinner
 import android.widget.Toast
-import com.example.trab_final.Main
 import com.example.trab_final.R
 import com.example.trab_final.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.coroutines.*
-import kotlin.coroutines.*
 
 
 class Login : AppCompatActivity() {
@@ -24,12 +20,14 @@ class Login : AppCompatActivity() {
     private lateinit var loginBtn : Button
     private lateinit var mAuth : FirebaseAuth
     private lateinit var database : DatabaseReference
-    private var _role : String? = null
+    private lateinit var _userList : ArrayList<User>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        _userList = ArrayList<User>()
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -37,6 +35,8 @@ class Login : AppCompatActivity() {
         inputPassword = findViewById(R.id.edit_password)
         signupBtn = findViewById(R.id.btn_signup)
         loginBtn = findViewById(R.id.btn_login)
+        database = FirebaseDatabase.getInstance().getReference()
+        getRole()
 
         signupBtn.setOnClickListener{
             val intent = Intent(this, Signup::class.java)
@@ -58,9 +58,7 @@ class Login : AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for (postSnapshop in snapshot.children) {
                         var currentUser = postSnapshop.getValue(User::class.java)
-                        if (mAuth.currentUser?.uid == currentUser?.uId) {
-                            _role = currentUser?.role.toString()
-                        }
+                        _userList.add(currentUser!!)
                     }
                 }
 
@@ -69,36 +67,29 @@ class Login : AppCompatActivity() {
                 }
             })
     }
-    private fun enterPage(role : String?){
-        if(role.equals("empresa")){
-            val intent = Intent(this@Login, MainEmpresa::class.java)
-            startActivity(intent)
-        }else if(role.equals("motoqueiro")){
-            val intent = Intent(this@Login, MainEmpresa::class.java)
-            startActivity(intent)
-        }else if(role.equals("atendente")){
-            val intent = Intent(this@Login, funcionarioListOrders::class.java)
-            startActivity(intent)
+    private fun enterPage(currentId : String?){
+        for ( user in _userList ){
+            if(user.uId == currentId.toString()){
+                if(user.role.equals("empresa")){
+                    val intent = Intent(this@Login, MainEmpresa::class.java)
+                    startActivity(intent)
+                }else if(user.role.equals("motoqueiro")){
+                    val intent = Intent(this@Login, MainEmpresa::class.java)
+                    startActivity(intent)
+                }else if(user.role.equals("atendente")){
+                    val intent = Intent(this@Login, funcionarioListOrders::class.java)
+                    startActivity(intent)
+                }
+            }
         }
-        finish()
-
     }
     private fun login(email: String, password: String){
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){task ->
                 if(task.isSuccessful){
-                    database = FirebaseDatabase.getInstance().getReference()
 
-                    CoroutineScope(Dispatchers.IO).launch {
-                        val res: Deferred<Unit> = async { getRole() }
-                        res.await()
-                        withContext(Dispatchers.Main){
-                            _role?.let {
-                                println(_role)
-                                enterPage(_role)
-                            }
-                        }
-                    }
+                    enterPage(mAuth.currentUser?.uid)
+                    finish()
 
                 }else{
                     Toast.makeText(this@Login, "User does not exist", Toast.LENGTH_LONG).show()
