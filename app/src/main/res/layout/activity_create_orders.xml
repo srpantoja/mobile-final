@@ -69,24 +69,24 @@
         android:background="@drawable/input_backgroud"
         android:hint="Código Produto"
         android:paddingLeft="13dp" />
-
-    <EditText
-        android:id="@+id/edit_emailEntregador"
+    <Spinner
+        android:id="@+id/edit_Entregador"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/edit_codProduto"
+        android:background="@drawable/input_backgroud"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="18dp"
         android:layout_marginRight="28dp"
-        android:background="@drawable/input_backgroud"
-        android:hint="Email do Entregador"
-        android:paddingLeft="13dp" />
+        android:paddingLeft="13dp"
+        />
+
 
     <Button
         android:id="@+id/btn_signup_pedido"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edit_emailEntregador"
+        android:layout_below="@+id/edit_Entregador"
         android:text="Cadastrar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp" />
