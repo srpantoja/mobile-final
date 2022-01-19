@@ -57,7 +57,16 @@ class Signup : AppCompatActivity() {
                     }
                     else
                         addUserToDatabase(name, email, role, mAuth.currentUser?.uid!!)
-                    val intent = Intent(this@Signup, Main::class.java)
+                    if(role.equals("empresa")){
+                        val intent = Intent(this@Signup, MainEmpresa::class.java)
+                        startActivity(intent)
+                    }else if(role.equals("motoqueiro")){
+                        val intent = Intent(this@Signup, DeliveryListOrders::class.java)
+                        startActivity(intent)
+                    }else if(role.equals("atendente")){
+                        val intent = Intent(this@Signup, funcionarioListOrders::class.java)
+                        startActivity(intent)
+                    }
                     finish()
                     startActivity(intent)
                 }else{

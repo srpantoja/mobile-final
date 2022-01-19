@@ -74,7 +74,7 @@ class Login : AppCompatActivity() {
                     val intent = Intent(this@Login, MainEmpresa::class.java)
                     startActivity(intent)
                 }else if(user.role.equals("motoqueiro")){
-                    val intent = Intent(this@Login, MainEmpresa::class.java)
+                    val intent = Intent(this@Login, DeliveryListOrders::class.java)
                     startActivity(intent)
                 }else if(user.role.equals("atendente")){
                     val intent = Intent(this@Login, funcionarioListOrders::class.java)
