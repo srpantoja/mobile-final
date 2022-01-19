@@ -2,9 +2,11 @@ package com.example.trab_final.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.trab_final.R
 import com.example.trab_final.adapters.ViewPagerAdapter
+import com.example.trab_final.view.fragmentsEmpresa.FuncionarioFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -17,6 +19,7 @@ class MainEmpresa : AppCompatActivity() {
         val viewPager2 = findViewById<ViewPager2>(R.id.view_pager2)
 
         val adapter = ViewPagerAdapter(supportFragmentManager,lifecycle)
+
 
         viewPager2.adapter=adapter
         TabLayoutMediator(tabLayout,viewPager2){tab,position->
