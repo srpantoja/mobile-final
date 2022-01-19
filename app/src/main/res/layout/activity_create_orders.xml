@@ -83,7 +83,7 @@
 
 
     <Button
-        android:id="@+id/btn_signup_pedido"
+        android:id="@+id/btn_cad_pedido"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_Entregador"
