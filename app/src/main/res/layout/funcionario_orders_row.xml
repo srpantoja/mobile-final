@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_items_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:id="@+id/cardViewOnClick">
+
+        <TextView
+            android:id="@+id/orders_client_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:text="Cliente"/>
+
+        <TextView
+            android:id="@+id/orders_street_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orders_client_name"
+            android:layout_margin="10px"
+            android:text="Rua"/>
+        <TextView
+            android:id="@+id/orders_district_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orders_street_name"
+            android:layout_margin="10px"
+            android:text="Bairro"/>
+        <TextView
+            android:id="@+id/orders_number_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orders_district_name"
+            android:layout_margin="10px"
+            android:text="Number"/>
+
+        </LinearLayout>
+    </LinearLayout>
