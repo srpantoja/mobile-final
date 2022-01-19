@@ -69,17 +69,17 @@
         android:background="@drawable/input_backgroud"
         android:hint="Código Produto"
         android:paddingLeft="13dp" />
-    <Spinner
+    <EditText
         android:id="@+id/edit_Entregador"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/edit_codProduto"
-        android:background="@drawable/input_backgroud"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="18dp"
         android:layout_marginRight="28dp"
-        android:paddingLeft="13dp"
-        />
+        android:background="@drawable/input_backgroud"
+        android:hint="Email do entregador"
+        android:paddingLeft="13dp" />
 
 
     <Button

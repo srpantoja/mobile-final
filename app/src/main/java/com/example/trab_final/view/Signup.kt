@@ -36,8 +36,10 @@ class Signup : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         val roles = listOf("motoqueiro", "atendente", "empresa")
+
         val adapterSpinner = ArrayAdapter(this, android.R.layout.simple_list_item_1, roles)
         adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_item)
+
         inputRole.adapter = adapterSpinner
         signupBtn.setOnClickListener {
             val name = inputName.text.toString()
