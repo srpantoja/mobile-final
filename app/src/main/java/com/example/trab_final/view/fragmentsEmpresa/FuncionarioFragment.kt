@@ -17,11 +17,6 @@ import com.google.firebase.database.*
 
 
 
-
-
-
-
-
 class FuncionarioFragment : Fragment() {
 
     private lateinit var addFuncionarioButton: Button
