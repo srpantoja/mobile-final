@@ -25,6 +25,7 @@ class OrdersFuncionarioViewAdapter(val context: Context, val orderList: ArrayLis
         holder.textStreet.text = currentOrder.street
         holder.textDistrict.text = currentOrder.district
         holder.textNumber.text = currentOrder.number
+        holder.textStatus.text = currentOrder.status
 
     }
 
@@ -38,6 +39,7 @@ class OrdersFuncionarioViewAdapter(val context: Context, val orderList: ArrayLis
         var textStreet: TextView  = itemView.findViewById(R.id.orders_street_name_fun)
         var textDistrict: TextView  = itemView.findViewById(R.id.orders_district_name_fun)
         var textNumber: TextView  = itemView.findViewById(R.id.orders_number_name_fun)
+        var textStatus: TextView  = itemView.findViewById(R.id.orders_status_name_fun)
 
     }
 }

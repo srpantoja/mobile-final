@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_700"
             android:textSize="18dp"
             android:text="Cliente"/>
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/orders_client_name_fun"
             android:layout_margin="10px"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_700"
             android:textSize="18dp"
             android:text="Rua"/>
         <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/orders_street_name_fun"
             android:layout_margin="10px"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_700"
             android:textSize="18dp"
             android:text="Bairro"/>
         <TextView
@@ -46,9 +46,18 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/orders_district_name_fun"
             android:layout_margin="10px"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_700"
             android:textSize="18dp"
             android:text="Number"/>
+        <TextView
+            android:id="@+id/orders_status_name_fun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orders_number_name_fun"
+            android:layout_margin="10px"
+            android:textColor="@color/purple_700"
+            android:textSize="18dp"
+            android:text="Status"/>
 
         </LinearLayout>
     </LinearLayout>

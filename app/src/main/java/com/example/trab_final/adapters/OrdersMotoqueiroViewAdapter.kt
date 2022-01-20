@@ -10,9 +10,14 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trab_final.R
 import com.example.trab_final.models.Orders
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+
 
 class OrdersMotoqueiroViewAdapter (val context: Context, val orderList: ArrayList<Orders>):
     RecyclerView.Adapter<OrdersMotoqueiroViewAdapter.OrdersMotoqueiroViewHolder>() {
+
+    private lateinit var database: DatabaseReference
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrdersMotoqueiroViewHolder {
         val view: View = LayoutInflater.from(context).inflate(R.layout.orders_rows, parent, false)
@@ -26,12 +31,19 @@ class OrdersMotoqueiroViewAdapter (val context: Context, val orderList: ArrayLis
         holder.textStreet.text = currentOrder.street
         holder.textDistrict.text = currentOrder.district
         holder.textNumber.text = currentOrder.number
+        holder.textStatus.text = currentOrder.status
+        database = FirebaseDatabase.getInstance().getReference().child("orders")
+
 
         holder.btnConfirm.setOnClickListener {
+            currentOrder.status = "O Produto Foi Entregue"
+            database.child(currentOrder.oId.toString()).setValue(currentOrder)
             Toast.makeText(this.context,"Confirm!!", Toast.LENGTH_LONG).show()
         }
 
         holder.btnCancel.setOnClickListener {
+            currentOrder.status = "O Produto Foi Cancelado"
+            database.child(currentOrder.oId.toString()).removeValue()
             Toast.makeText(this.context,"Cancel!!", Toast.LENGTH_LONG).show()
         }
     }
@@ -46,6 +58,7 @@ class OrdersMotoqueiroViewAdapter (val context: Context, val orderList: ArrayLis
         var textStreet: TextView = itemView.findViewById(R.id.orders_street_name)
         var textDistrict: TextView = itemView.findViewById(R.id.orders_district_name)
         var textNumber: TextView = itemView.findViewById(R.id.orders_number_name)
+        var textStatus: TextView = itemView.findViewById(R.id.orders_status_name)
         var btnConfirm: Button = itemView.findViewById(R.id.confirm_orders)
         var btnCancel: Button = itemView.findViewById(R.id.cancel_orders)
 
