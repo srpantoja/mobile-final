@@ -78,10 +78,13 @@ class createOrders : AppCompatActivity() {
         }
     }
 
+
     private fun addOrders(name: String?, street: String?, district: String?, number: String?, codProduct: String?, deliveryId: String?, companyId: String?){
+        val newOrders : DatabaseReference = database.push()
+        val idOrders = newOrders.key
         database = FirebaseDatabase.getInstance().getReference()
 
-    database.child("orders").push().setValue(Orders(name, street,district, number, codProduct, deliveryId, companyId, "O produto encontra-se na loja."))
+    database.child("orders").child(idOrders.toString()).setValue(Orders(idOrders,name, street,district, number, codProduct, deliveryId, companyId, "O produto encontra-se na loja."))
 
         val intent = Intent(this@createOrders, funcionarioListOrders::class.java)
         startActivity(intent)
