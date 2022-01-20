@@ -22,6 +22,9 @@ class Login : AppCompatActivity() {
     private lateinit var database : DatabaseReference
     private lateinit var _userList : ArrayList<User>
 
+    companion object{
+        var companionUser: User? = null
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +73,7 @@ class Login : AppCompatActivity() {
     private fun enterPage(currentId : String?){
         for ( user in _userList ){
             if(user.uId == currentId.toString()){
+                companionUser = user
                 if(user.role.equals("empresa")){
                     val intent = Intent(this@Login, MainEmpresa::class.java)
                     startActivity(intent)

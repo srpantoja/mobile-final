@@ -8,10 +8,11 @@ class Orders {
     var codProduct : String? = null
     var deliveryId : String? = null
     var companyId : String? = null
+    var status : String? = null
 
     constructor(){}
 
-    constructor(name: String?, street: String?, district: String?, number: String?, codProduct: String?, deliveryId: String?, companyId: String?){
+    constructor(name: String?, street: String?, district: String?, number: String?, codProduct: String?, deliveryId: String?, companyId: String?,status : String?){
         this.name = name
         this.street = street
         this.district = district

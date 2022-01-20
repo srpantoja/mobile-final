@@ -17,6 +17,8 @@
             android:id="@+id/orders_client_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18dp"
             android:layout_margin="10px"
             android:text="Cliente"/>
 
@@ -25,6 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/orders_client_name"
+            android:textColor="@color/black"
+            android:textSize="18dp"
             android:layout_margin="10px"
             android:text="Rua"/>
         <TextView
@@ -33,6 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/orders_street_name"
             android:layout_margin="10px"
+            android:textColor="@color/black"
+            android:textSize="18dp"
             android:text="Bairro"/>
         <TextView
             android:id="@+id/orders_number_name"
@@ -40,6 +46,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/orders_district_name"
             android:layout_margin="10px"
+            android:textColor="@color/black"
+            android:textSize="18dp"
             android:text="Number"/>
 
         <LinearLayout
