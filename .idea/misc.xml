@@ -8,14 +8,14 @@
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/drawable/input_backgroud.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_create_orders.xml" value="0.18" />
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_delivery_list_orders.xml" value="0.209375" />
+        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_delivery_list_orders.xml" value="0.1" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_funcionario_list_orders.xml" value="0.1" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_login.xml" value="0.209375" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_main_cadPedidos.xml" value="0.1" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/activity_signup.xml" value="0.209375" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/fragment_funcionario.xml" value="0.15079365079365079" />
-        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/funcionario_orders_row.xml" value="0.121875" />
+        <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/funcionario_orders_row.xml" value="0.25" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/layout/orders_rows.xml" value="0.33" />
       </map>
     </option>
