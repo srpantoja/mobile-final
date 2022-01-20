@@ -3,9 +3,7 @@ package com.example.trab_final.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
-import com.example.trab_final.Main
 import com.example.trab_final.R
 import com.example.trab_final.models.Company
 import com.example.trab_final.models.User
