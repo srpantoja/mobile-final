@@ -1,4 +1,4 @@
-package com.example.trab_final.view
+package com.example.trab_final.view.employee
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +7,10 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trab_final.R
-import com.example.trab_final.adapters.OrdersFuncionarioViewAdapter
+import com.example.trab_final.adapters.OrdersEmployeeViewAdapter
 import com.example.trab_final.models.Orders
 import com.example.trab_final.models.User
+import com.example.trab_final.view.authpage.Login
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -19,13 +20,13 @@ class funcionarioListOrders : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var ordersRecyclerView : RecyclerView
     private lateinit var ordersList: ArrayList<Orders>
-    private lateinit var adapter: OrdersFuncionarioViewAdapter
+    private lateinit var adapter: OrdersEmployeeViewAdapter
     private lateinit var companyId: String
     private lateinit var currentUser : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_funcionario_list_orders)
+        setContentView(R.layout.activity_orders_list_orders)
         ordersList = ArrayList()
         currentUser = ""
         companyId = ""
@@ -60,7 +61,7 @@ class funcionarioListOrders : AppCompatActivity() {
                     println("NAME ACIMA")
 
                 }
-                adapter = OrdersFuncionarioViewAdapter(this@funcionarioListOrders, ordersList)
+                adapter = OrdersEmployeeViewAdapter(this@funcionarioListOrders, ordersList)
                 ordersRecyclerView.adapter = adapter
             }
 

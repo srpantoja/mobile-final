@@ -14,17 +14,17 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 
-class OrdersMotoqueiroViewAdapter (val context: Context, val orderList: ArrayList<Orders>):
-    RecyclerView.Adapter<OrdersMotoqueiroViewAdapter.OrdersMotoqueiroViewHolder>() {
+class OrdersDeliverymanViewAdapter (val context: Context, val orderList: ArrayList<Orders>):
+    RecyclerView.Adapter<OrdersDeliverymanViewAdapter.OrdersDeliverymanViewHolder>() {
 
     private lateinit var database: DatabaseReference
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrdersMotoqueiroViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrdersDeliverymanViewHolder {
         val view: View = LayoutInflater.from(context).inflate(R.layout.orders_rows, parent, false)
-        return OrdersMotoqueiroViewHolder(view)
+        return OrdersDeliverymanViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: OrdersMotoqueiroViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: OrdersDeliverymanViewHolder, position: Int) {
         val currentOrder = orderList[position]
 
         holder.textName.text = currentOrder.name
@@ -52,7 +52,7 @@ class OrdersMotoqueiroViewAdapter (val context: Context, val orderList: ArrayLis
         return orderList.size
     }
 
-    class OrdersMotoqueiroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class OrdersDeliverymanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         var textName: TextView = itemView.findViewById(R.id.orders_client_name)
         var textStreet: TextView = itemView.findViewById(R.id.orders_street_name)

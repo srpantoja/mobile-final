@@ -1,4 +1,4 @@
-package com.example.trab_final.view.fragmentsEmpresa
+package com.example.trab_final.view.company.fragmentsEmpresa
 
 import android.os.Bundle
 import android.util.Log
@@ -17,7 +17,7 @@ import com.google.firebase.database.*
 
 
 
-class FuncionarioFragment : Fragment() {
+class EmployeeFragment : Fragment() {
 
     private lateinit var addFuncionarioButton: Button
     private lateinit var emailField: EditText
@@ -33,7 +33,7 @@ class FuncionarioFragment : Fragment() {
 
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_funcionario, container, false)
+        val view = inflater.inflate(R.layout.fragment_employee, container, false)
 
         list_viewFunc = view.findViewById(R.id.list_viewFunc)
 
@@ -63,13 +63,6 @@ class FuncionarioFragment : Fragment() {
             }
             override fun onCancelled(error: DatabaseError) {}
         })
-
-
-        //val arrayAdapterUser: ArrayAdapter<User>
-
-
-
-
 
         addFuncionarioButton = view.findViewById(R.id.btn_addFunc)
         emailField = view.findViewById(R.id.textEmail)

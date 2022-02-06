@@ -1,12 +1,12 @@
 package com.example.trab_final.models
 
 class Company {
-    var name : String? = null
-    var email : String? = null
-    var role : String? = null
-    var uId : String? = null
-    var orders : ArrayList<Orders>? = null
-    var users : ArrayList<User>? = null
+    private var name : String? = null
+    private var email : String? = null
+    private var role : String? = null
+    private var uId : String? = null
+    private var orders : ArrayList<Orders>? = null
+    private var users : ArrayList<User>? = null
 
     constructor(){}
 

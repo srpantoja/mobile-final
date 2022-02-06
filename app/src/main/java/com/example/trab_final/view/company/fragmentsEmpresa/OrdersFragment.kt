@@ -1,4 +1,4 @@
-package com.example.trab_final.view.fragmentsEmpresa
+package com.example.trab_final.view.company.fragmentsEmpresa
 
 import android.os.Bundle
 import android.util.Log
@@ -10,12 +10,11 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.example.trab_final.R
 import com.example.trab_final.models.Orders
-import com.example.trab_final.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 
-class PedidosFragment : Fragment() {
+class OrdersFragment : Fragment() {
     private lateinit var database: DatabaseReference
     private lateinit var list_viewPedidos: ListView
     private lateinit var auth: FirebaseAuth
@@ -29,7 +28,7 @@ class PedidosFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_pedidos, container, false)
+        val view = inflater.inflate(R.layout.fragment_orders, container, false)
 
         list_viewPedidos = view.findViewById(R.id.list_viewPedidos)
         auth = FirebaseAuth.getInstance()

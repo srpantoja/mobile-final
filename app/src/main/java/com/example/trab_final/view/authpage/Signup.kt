@@ -1,4 +1,4 @@
-package com.example.trab_final.view
+package com.example.trab_final.view.authpage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,9 @@ import android.widget.*
 import com.example.trab_final.R
 import com.example.trab_final.models.Company
 import com.example.trab_final.models.User
+import com.example.trab_final.view.company.MainEmpresa
+import com.example.trab_final.view.deliveryman.DeliveryListOrders
+import com.example.trab_final.view.employee.funcionarioListOrders
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -57,31 +60,30 @@ class Signup : AppCompatActivity() {
                     }
                     else
                         addUserToDatabase(name, email, role, mAuth.currentUser?.uid!!)
-                    if(role.equals("empresa")){
+                    if(role == "empresa"){
                         val intent = Intent(this@Signup, MainEmpresa::class.java)
                         startActivity(intent)
-                    }else if(role.equals("motoqueiro")){
+                    }else if(role == "motoqueiro"){
                         val intent = Intent(this@Signup, DeliveryListOrders::class.java)
                         startActivity(intent)
-                    }else if(role.equals("atendente")){
+                    }else if(role == "atendente"){
                         val intent = Intent(this@Signup, funcionarioListOrders::class.java)
                         startActivity(intent)
                     }
                     finish()
-                    startActivity(intent)
                 }else{
-                    Toast.makeText(this@Signup, "some error occured", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@Signup, "some error occurred", Toast.LENGTH_LONG).show()
                 }
             }
     }
 
     private fun addCompanyToDatabase(name: String, email: String, role: String, uid: String){
-        mDbRef = FirebaseDatabase.getInstance().getReference()
+        mDbRef = FirebaseDatabase.getInstance().reference
         mDbRef.child("company").child(uid).setValue(Company(name, email,role, uid))
     }
 
     private fun addUserToDatabase(name: String, email: String, role: String, uid: String){
-        mDbRef = FirebaseDatabase.getInstance().getReference()
+        mDbRef = FirebaseDatabase.getInstance().reference
         mDbRef.child("user").child(uid).setValue(User(name, email,role, uid, ""))
     }
 }

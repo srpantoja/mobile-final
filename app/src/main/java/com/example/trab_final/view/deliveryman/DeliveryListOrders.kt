@@ -1,13 +1,13 @@
-package com.example.trab_final.view
+package com.example.trab_final.view.deliveryman
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trab_final.R
-import com.example.trab_final.adapters.OrdersFuncionarioViewAdapter
-import com.example.trab_final.adapters.OrdersMotoqueiroViewAdapter
+import com.example.trab_final.adapters.OrdersDeliverymanViewAdapter
 import com.example.trab_final.models.Orders
+import com.example.trab_final.view.authpage.Login
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -17,11 +17,11 @@ class DeliveryListOrders : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var ordersRecyclerView : RecyclerView
     private lateinit var ordersList: ArrayList<Orders>
-    private lateinit var adapter: OrdersMotoqueiroViewAdapter
+    private lateinit var adapter: OrdersDeliverymanViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_delivery_list_orders)
+        setContentView(R.layout.activity_deliveryman_list_orders)
         ordersList = ArrayList()
 
         ordersRecyclerView = findViewById(R.id.deliveryListRecyclerView)
@@ -41,9 +41,8 @@ class DeliveryListOrders : AppCompatActivity() {
                     var _currentOrders = postSnapshop.getValue(Orders::class.java)
                     if(_currentOrders?.deliveryId == Login.companionUser?.uId)
                         ordersList.add(_currentOrders!!)
-
                 }
-                adapter = OrdersMotoqueiroViewAdapter(this@DeliveryListOrders, ordersList)
+                adapter = OrdersDeliverymanViewAdapter(this@DeliveryListOrders, ordersList)
                 ordersRecyclerView.adapter = adapter
             }
 

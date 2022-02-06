@@ -4,10 +4,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.trab_final.view.fragmentsEmpresa.FuncionarioFragment
-import com.example.trab_final.view.fragmentsEmpresa.PedidosFragment
+import com.example.trab_final.view.company.fragmentsEmpresa.EmployeeFragment
+import com.example.trab_final.view.company.fragmentsEmpresa.OrdersFragment
 
-class ViewPagerAdapter(fragmentManager: FragmentManager,lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle) {
+class ViewFragmentAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle) {
     override fun getItemCount(): Int {
         return 2
     }
@@ -15,10 +15,10 @@ class ViewPagerAdapter(fragmentManager: FragmentManager,lifecycle: Lifecycle): F
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
-                PedidosFragment()
+                OrdersFragment()
             }
             1 -> {
-                FuncionarioFragment()
+                EmployeeFragment()
             }
             else -> {
                 Fragment()

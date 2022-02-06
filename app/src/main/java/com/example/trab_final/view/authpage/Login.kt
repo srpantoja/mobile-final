@@ -1,4 +1,4 @@
-package com.example.trab_final.view
+package com.example.trab_final.view.authpage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,9 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.trab_final.R
 import com.example.trab_final.models.User
+import com.example.trab_final.view.company.MainEmpresa
+import com.example.trab_final.view.deliveryman.DeliveryListOrders
+import com.example.trab_final.view.employee.funcionarioListOrders
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
