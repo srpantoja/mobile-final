@@ -4,7 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_create_orders.xml" value="0.15489130434782608" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_deliveryman_list_orders.xml" value="0.20606884057971014" />
         <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_funcionario_list_orders.xml" value="0.15489130434782608" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_order_route.xml" value="0.20606884057971014" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/activity_orders_list_orders.xml" value="0.20606884057971014" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/employee_orders_row.xml" value="0.17239583333333333" />
+        <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/fragment_orders.xml" value="0.20606884057971014" />
         <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/funcionario_orders_row.xml" value="0.15489130434782608" />
         <entry key="..\:/Users/jaime/Desktop/mobile-final/app/src/main/res/layout/orders_rows.xml" value="0.15489130434782608" />
         <entry key="..\:/Users/jeanpantoja/AndroidStudioProjects/trab-final/mobile-final/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22552083333333334" />
