@@ -41,7 +41,7 @@ class Login : AppCompatActivity() {
         inputPassword = findViewById(R.id.edit_password)
         signupBtn = findViewById(R.id.btn_signup)
         loginBtn = findViewById(R.id.btn_login)
-        database = FirebaseDatabase.getInstance().getReference()
+        database = FirebaseDatabase.getInstance().reference
         getRole()
 
         signupBtn.setOnClickListener{
@@ -56,22 +56,16 @@ class Login : AppCompatActivity() {
         }
     }
 
-
-
-
     private fun getRole(){
-            database.child("user").addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    for (postSnapshop in snapshot.children) {
-                        var currentUser = postSnapshop.getValue(User::class.java)
-                        _userList.add(currentUser!!)
-                    }
+        database.child("user").addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for (postSnapshop in snapshot.children) {
+                    var currentUser = postSnapshop.getValue(User::class.java)
+                    _userList.add(currentUser!!)
                 }
-
-                override fun onCancelled(error: DatabaseError) {
-
-                }
-            })
+            }
+            override fun onCancelled(error: DatabaseError) {}
+        })
     }
     private fun enterPage(currentId : String?){
         for ( user in _userList ){

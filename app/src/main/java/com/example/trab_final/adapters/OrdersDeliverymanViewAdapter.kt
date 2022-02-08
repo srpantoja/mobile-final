@@ -1,21 +1,30 @@
 package com.example.trab_final.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trab_final.R
 import com.example.trab_final.models.Orders
+import com.example.trab_final.view.authpage.Login
+import com.example.trab_final.view.authpage.Signup
+import com.example.trab_final.view.company.MainEmpresa
+import com.example.trab_final.view.deliveryman.DeliveryListOrders
+import com.example.trab_final.view.deliveryman.OrderRoute
+import com.example.trab_final.view.employee.funcionarioListOrders
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 
 class OrdersDeliverymanViewAdapter (val context: Context, val orderList: ArrayList<Orders>):
-    RecyclerView.Adapter<OrdersDeliverymanViewAdapter.OrdersDeliverymanViewHolder>() {
+    RecyclerView.Adapter<OrdersDeliverymanViewAdapter.OrdersDeliverymanViewHolder>(){
 
     private lateinit var database: DatabaseReference
 
@@ -35,6 +44,11 @@ class OrdersDeliverymanViewAdapter (val context: Context, val orderList: ArrayLi
         database = FirebaseDatabase.getInstance().getReference().child("orders")
 
 
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context, OrderRoute::class.java)
+            context.startActivity(intent)
+        }
+
         holder.btnConfirm.setOnClickListener {
             currentOrder.status = "O Produto Foi Entregue"
             database.child(currentOrder.oId.toString()).setValue(currentOrder)
@@ -47,6 +61,8 @@ class OrdersDeliverymanViewAdapter (val context: Context, val orderList: ArrayLi
             Toast.makeText(this.context,"Cancel!!", Toast.LENGTH_LONG).show()
         }
     }
+
+
 
     override fun getItemCount(): Int {
         return orderList.size
