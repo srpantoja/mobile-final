@@ -8,7 +8,7 @@ import com.example.trab_final.adapters.ViewFragmentAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class MainEmpresa : AppCompatActivity() {
+class MainCompany : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_company)

@@ -10,12 +10,13 @@ import com.example.trab_final.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
-class createOrders : AppCompatActivity() {
+class CreateOrders : AppCompatActivity() {
 
     private lateinit var nameClienteField : EditText
     private lateinit var bairroField : EditText
     private lateinit var ruaField : EditText
     private lateinit var numeroField : EditText
+    private lateinit var cityField : EditText
     private lateinit var codPedidoField : EditText
     private lateinit var entregadorField : EditText
     private lateinit var addButton : Button
@@ -33,6 +34,8 @@ class createOrders : AppCompatActivity() {
         bairroField = findViewById(R.id.edit_bairro)
         ruaField = findViewById(R.id.edit_rua)
         numeroField = findViewById(R.id.edit_number)
+        cityField = findViewById(R.id.edit_city)
+
         codPedidoField = findViewById(R.id.edit_codProduto)
         entregadorField = findViewById(R.id.edit_Entregador)
         addButton = findViewById(R.id.btn_cad_pedido)
@@ -64,9 +67,10 @@ class createOrders : AppCompatActivity() {
             if(entregador != ""){
             addOrders(
                 nameClienteField.text.toString(),
-                bairroField.text.toString(),
                 ruaField.text.toString(),
+                bairroField.text.toString(),
                 numeroField.text.toString(),
+                cityField.text.toString(),
                 codPedidoField.text.toString(),
                 entregador,
                 _currentUser.companyId.toString()
@@ -79,14 +83,14 @@ class createOrders : AppCompatActivity() {
     }
 
 
-    private fun addOrders(name: String?, street: String?, district: String?, number: String?, codProduct: String?, deliveryId: String?, companyId: String?){
+    private fun addOrders(name: String?, street: String?, district: String?, number: String?, city: String?, codProduct: String?, deliveryId: String?, companyId: String?){
         val newOrders : DatabaseReference = database.push()
         val idOrders = newOrders.key
         database = FirebaseDatabase.getInstance().getReference()
 
-    database.child("orders").child(idOrders.toString()).setValue(Orders(idOrders,name, street,district, number, codProduct, deliveryId, companyId, "O produto encontra-se na loja."))
+        database.child("orders").child(idOrders.toString()).setValue(Orders(idOrders,name, street, district, number, city, codProduct, deliveryId, companyId, "O produto encontra-se na loja."))
 
-        val intent = Intent(this@createOrders, funcionarioListOrders::class.java)
+        val intent = Intent(this@CreateOrders, EmployeeListOrders::class.java)
         startActivity(intent)
     }
 }

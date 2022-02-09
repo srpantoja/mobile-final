@@ -7,6 +7,8 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -34,16 +36,16 @@
             android:exported="true"
             android:label="@string/title_activity_order_route" />
         <activity
-            android:name=".view.employee.funcionarioListOrders"
+            android:name=".view.employee.EmployeeListOrders"
             android:exported="true" />
         <activity
-            android:name=".view.employee.createOrders"
+            android:name=".view.employee.CreateOrders"
             android:exported="true" />
         <activity
             android:name=".view.deliveryman.DeliveryListOrders"
             android:exported="true" />
         <activity
-            android:name=".view.company.MainEmpresa"
+            android:name=".view.company.MainCompany"
             android:exported="true" />
         <activity
             android:name=".view.authpage.Signup"

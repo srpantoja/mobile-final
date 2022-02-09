@@ -7,9 +7,9 @@ import android.widget.*
 import com.example.trab_final.R
 import com.example.trab_final.models.Company
 import com.example.trab_final.models.User
-import com.example.trab_final.view.company.MainEmpresa
+import com.example.trab_final.view.company.MainCompany
 import com.example.trab_final.view.deliveryman.DeliveryListOrders
-import com.example.trab_final.view.employee.funcionarioListOrders
+import com.example.trab_final.view.employee.EmployeeListOrders
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -61,13 +61,13 @@ class Signup : AppCompatActivity() {
                     else
                         addUserToDatabase(name, email, role, mAuth.currentUser?.uid!!)
                     if(role == "empresa"){
-                        val intent = Intent(this@Signup, MainEmpresa::class.java)
+                        val intent = Intent(this@Signup, MainCompany::class.java)
                         startActivity(intent)
                     }else if(role == "motoqueiro"){
                         val intent = Intent(this@Signup, DeliveryListOrders::class.java)
                         startActivity(intent)
                     }else if(role == "atendente"){
-                        val intent = Intent(this@Signup, funcionarioListOrders::class.java)
+                        val intent = Intent(this@Signup, EmployeeListOrders::class.java)
                         startActivity(intent)
                     }
                     finish()

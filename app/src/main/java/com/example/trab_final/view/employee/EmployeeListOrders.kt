@@ -14,7 +14,7 @@ import com.example.trab_final.view.authpage.Login
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
-class funcionarioListOrders : AppCompatActivity() {
+class EmployeeListOrders : AppCompatActivity() {
     private lateinit var addButton: Button
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
@@ -35,7 +35,7 @@ class funcionarioListOrders : AppCompatActivity() {
         addButton = findViewById(R.id.addEntrega)
 
         ordersRecyclerView = findViewById(R.id.funcionarioRecyclerView)
-        ordersRecyclerView.layoutManager = LinearLayoutManager(this@funcionarioListOrders)
+        ordersRecyclerView.layoutManager = LinearLayoutManager(this@EmployeeListOrders)
 
         auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser?.uid.toString()
@@ -44,7 +44,7 @@ class funcionarioListOrders : AppCompatActivity() {
         //getCompanyId()
         getListOrdersByCompanyId()
         addButton.setOnClickListener {
-            val intent = Intent(this@funcionarioListOrders, createOrders::class.java)
+            val intent = Intent(this@EmployeeListOrders, CreateOrders::class.java)
             startActivity(intent)
         }
     }
@@ -61,7 +61,7 @@ class funcionarioListOrders : AppCompatActivity() {
                     println("NAME ACIMA")
 
                 }
-                adapter = OrdersEmployeeViewAdapter(this@funcionarioListOrders, ordersList)
+                adapter = OrdersEmployeeViewAdapter(this@EmployeeListOrders, ordersList)
                 ordersRecyclerView.adapter = adapter
             }
 
