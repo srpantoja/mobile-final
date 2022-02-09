@@ -4,21 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trab_final.R
 import com.example.trab_final.models.Orders
-import com.example.trab_final.view.authpage.Login
-import com.example.trab_final.view.authpage.Signup
-import com.example.trab_final.view.company.MainEmpresa
-import com.example.trab_final.view.deliveryman.DeliveryListOrders
 import com.example.trab_final.view.deliveryman.OrderRoute
-import com.example.trab_final.view.employee.funcionarioListOrders
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -38,7 +31,7 @@ class OrdersDeliverymanViewAdapter (val context: Context, val orderList: ArrayLi
 
         holder.textName.text = currentOrder.name
         holder.textStreet.text = currentOrder.street
-        holder.textDistrict.text = currentOrder.district
+        holder.textDistrict.text = "${currentOrder.district}, ${currentOrder.city}"
         holder.textNumber.text = currentOrder.number
         holder.textStatus.text = currentOrder.status
         database = FirebaseDatabase.getInstance().getReference().child("orders")
@@ -46,6 +39,9 @@ class OrdersDeliverymanViewAdapter (val context: Context, val orderList: ArrayLi
 
         holder.itemView.setOnClickListener{
             val intent = Intent(context, OrderRoute::class.java)
+            intent.putExtra("street", currentOrder.street)
+            intent.putExtra("district", "${currentOrder.district}, ${currentOrder.city}")
+            intent.putExtra("number", currentOrder.number)
             context.startActivity(intent)
         }
 

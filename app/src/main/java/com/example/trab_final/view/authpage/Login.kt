@@ -8,9 +8,9 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.trab_final.R
 import com.example.trab_final.models.User
-import com.example.trab_final.view.company.MainEmpresa
+import com.example.trab_final.view.company.MainCompany
 import com.example.trab_final.view.deliveryman.DeliveryListOrders
-import com.example.trab_final.view.employee.funcionarioListOrders
+import com.example.trab_final.view.employee.EmployeeListOrders
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -72,13 +72,13 @@ class Login : AppCompatActivity() {
             if(user.uId == currentId.toString()){
                 companionUser = user
                 if(user.role.equals("empresa")){
-                    val intent = Intent(this@Login, MainEmpresa::class.java)
+                    val intent = Intent(this@Login, MainCompany::class.java)
                     startActivity(intent)
                 }else if(user.role.equals("motoqueiro")){
                     val intent = Intent(this@Login, DeliveryListOrders::class.java)
                     startActivity(intent)
                 }else if(user.role.equals("atendente")){
-                    val intent = Intent(this@Login, funcionarioListOrders::class.java)
+                    val intent = Intent(this@Login, EmployeeListOrders::class.java)
                     startActivity(intent)
                 }
             }

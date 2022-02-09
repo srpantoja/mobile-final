@@ -59,10 +59,22 @@
         android:paddingLeft="13dp" />
 
     <EditText
-        android:id="@+id/edit_codProduto"
+        android:id="@+id/edit_city"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/edit_number"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/input_backgroud"
+        android:hint="Cidade"
+        android:paddingLeft="13dp" />
+
+    <EditText
+        android:id="@+id/edit_codProduto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_city"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="18dp"
         android:layout_marginRight="28dp"
